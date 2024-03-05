@@ -31,7 +31,7 @@ export default {
       onPrintDialogClose: () => {},
       onIncompatibleBrowser: () => {},
       modalMessage: 'Retrieving Document...',
-      frameId: 'printJS',
+      frameId: 'sdoc-print-container',
       frameRemoveDelay: null,
       printableElement: null,
       documentTitle: 'Document',
