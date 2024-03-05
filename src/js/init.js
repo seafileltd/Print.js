@@ -43,11 +43,12 @@ export default {
       style: null,
       scanStyles: true,
       base64: false,
+      forceStandardizingFont: false,
 
       // Deprecated
       onPdfOpen: null,
       font: 'TimesNewRoman',
-      font_size: '12pt',
+      font_size: '11pt',
       honorMarginPadding: true,
       honorColor: false,
       imageStyle: 'max-width: 100%;'
