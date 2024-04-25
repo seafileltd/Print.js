@@ -2,7 +2,7 @@
   "name": "@seafile/print-js",
   "homepage": "http://printjs.crabbly.com",
   "description": "A tiny javascript library to help printing from the web.",
-  "version": "1.6.4",
+  "version": "1.6.5",
   "private": false,
   "main": "dist/print.js",
   "types": "src/index.d.ts",
@@ -41,7 +41,8 @@
     "coverage": "open coverage/lcov-report/index.html",
     "coveralls": "cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "start": "webpack-dev-server --public http://localhost:8080/test/manual --open",
-    "standard:fix": "standard --fix"
+    "standard:fix": "standard --fix",
+    "prepublishOnly": "npm run production"
   },
   "author": "Rodrigo Vieira <rodrigo@crabbly.com>",
   "standard": {
