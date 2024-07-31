@@ -2,7 +2,7 @@
   "name": "@seafile/print-js",
   "homepage": "http://printjs.crabbly.com",
   "description": "A tiny javascript library to help printing from the web.",
-  "version": "1.6.5",
+  "version": "1.6.6",
   "private": false,
   "main": "dist/print.js",
   "types": "src/index.d.ts",
