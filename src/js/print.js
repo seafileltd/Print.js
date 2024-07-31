@@ -39,7 +39,16 @@ const Print = {
       }
 
       // If printing images, wait for them to load inside the iframe
-      const images = printDocument.getElementsByTagName('img')
+      let images = printDocument.getElementsByTagName('img')
+      let validImagesObject = {};
+      images = Array.from(images).filter(item => {
+        const imageUrl = item.currentSrc;
+        if (!validImagesObject[imageUrl]) {
+          validImagesObject[imageUrl] = imageUrl;
+        }
+      });
+
+      images = Object.values(validImagesObject);
 
       if (images.length > 0) {
         loadIframeImages(Array.from(images)).then(() => performPrint(iframeElement, params))
@@ -53,7 +62,6 @@ const Print = {
 function performPrint (iframeElement, params) {
   try {
     iframeElement.focus()
-
     // If Edge or IE, try catch with execCommand
     if (Browser.isEdge() || Browser.isIE()) {
       try {
